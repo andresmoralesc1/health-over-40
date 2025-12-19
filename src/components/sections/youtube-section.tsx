@@ -14,24 +14,24 @@ interface Video {
 const recentVideos: Video[] = [
   {
     id: "1",
-    title: "VO₂ Max: El Mejor Predictor de Longevidad",
-    description: "Análisis completo de por qué el VO₂ Max es crucial para tu salud después de los 40 y cómo mejorarlo.",
+    title: "VO₂ Max: The #1 Longevity Predictor",
+    description: "Complete analysis of why VO₂ Max is crucial for health after 40 and how to improve it.",
     thumbnail: "/api/placeholder/320/180",
     duration: "12:34",
     views: "15.2K"
   },
   {
     id: "2", 
-    title: "Terapia de Luz Roja: ¿Realmente Funciona?",
-    description: "Revisión de estudios clínicos sobre los efectos de la terapia de luz roja en la producción de ATP y longevidad.",
+    title: "Red Light Therapy: Does It Really Work?",
+    description: "Clinical study review on red light therapy effects on ATP production and longevity.",
     thumbnail: "/api/placeholder/320/180",
     duration: "18:45",
     views: "8.7K"
   },
   {
     id: "3",
-    title: "NAD+ y Longevidad: Mitos vs Evidencia",
-    description: "Desmitificando los suplementos de NAD+ y analizando si realmente apoyan la longevidad celular.",
+    title: "NAD+ & Longevity: Myths vs Evidence",
+    description: "Debunking NAD+ supplements and analyzing if they truly support cellular longevity.",
     thumbnail: "/api/placeholder/320/180", 
     duration: "22:18",
     views: "12.4K"
@@ -45,10 +45,10 @@ export default function YouTubeSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Lo Último en YouTube
+              Latest from YouTube
             </h2>
             <p className="max-w-[900px] text-gray-500 md:text-xl dark:text-gray-400">
-              Análisis profundo basado en evidencia científica. No superficialidades, solo contenido que transforma tu comprensión de la salud.
+              Deep-dive analysis based on scientific evidence. No surface-level content, just insights that transform your health understanding.
             </p>
           </div>
         </div>
@@ -94,11 +94,11 @@ export default function YouTubeSection() {
         
         <div className="mt-12 text-center">
           <Button variant="outline" size="lg" className="group">
-            Suscribirse al Canal
+            Subscribe to Channel
             <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
           <p className="mt-2 text-sm text-muted-foreground">
-            🔔 Activa las notificaciones para no perderte ningún análisis científico
+            🔔 Enable notifications to never miss scientific analysis
           </p>
         </div>
       </div>

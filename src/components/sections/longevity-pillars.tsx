@@ -15,31 +15,31 @@ interface Pillar {
 const pillars: Pillar[] = [
   {
     id: "1",
-    title: "Entrenamiento de Resistencia",
-    description: "Protege tu densidad ósea y masa muscular (el órgano de la longevidad)",
+    title: "Resistance Training",
+    description: "Protect your bone density and muscle mass (the longevity organ)",
     icon: <Dumbbell className="h-6 w-6" />,
-    gradient: "from-blue-600 to-cyan-600"
+    gradient: "from-emerald-600 to-blue-600"
   },
   {
     id: "2", 
-    title: "Salud Metabólica",
-    description: "Estrategias para mejorar tu VO₂ Max y sensibilidad a la insulina",
+    title: "Metabolic Health",
+    description: "Strategies to improve your VO₂ Max and insulin sensitivity",
     icon: <Heart className="h-6 w-6" />,
-    gradient: "from-red-600 to-pink-600"
+    gradient: "from-emerald-600 to-blue-600"
   },
   {
     id: "3",
-    title: "Equilibrio Hormonal", 
-    description: "Navegando la perimenopausia y la optimización de la testosterona",
+    title: "Hormonal Balance", 
+    description: "Navigating perimenopause and testosterone optimization",
     icon: <Brain className="h-6 w-6" />,
-    gradient: "from-purple-600 to-indigo-600"
+    gradient: "from-emerald-600 to-blue-600"
   },
   {
     id: "4",
-    title: "Recuperación Avanzada",
-    description: "Biohacking aplicado: desde terapia de luz roja hasta optimización del sueño",
+    title: "Advanced Recovery",
+    description: "Applied biohacking: from red light therapy to sleep optimization",
     icon: <Zap className="h-6 w-6" />,
-    gradient: "from-yellow-600 to-orange-600"
+    gradient: "from-emerald-600 to-blue-600"
   }
 ];
 
@@ -50,11 +50,11 @@ export default function LongevityPillars() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Los 4 Pilares de la Longevidad
+              The 4 Pillars of Longevity
             </h2>
             <p className="max-w-[900px] text-gray-500 md:text-xl dark:text-gray-400">
-              Basado en la ciencia más reciente de Medicina 3.0, estos pilares forman la base 
-              de tu protocolo de salud para después de los 40.
+              Based on the latest Medicine 3.0 science, these pillars form the foundation 
+              of your health protocol for after 40.
             </p>
           </div>
         </div>
@@ -84,18 +84,18 @@ export default function LongevityPillars() {
           <Card className="max-w-2xl mx-auto border-2 border-dashed">
             <CardHeader>
               <CardTitle className="text-2xl">
-                Descarga el Protocolo de Inicio Rápido
+                Download Quick Start Protocol
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                5 Hábitos para recuperar tu energía en 30 días basados en evidencia científica
+                5 habits to reclaim your energy in 30 days based on scientific evidence
               </p>
-              <Button size="lg" className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-purple-600">
-                Descargar Protocolo GRATIS
+              <Button size="lg" className="w-full md:w-auto bg-gradient-to-r from-emerald-600 to-blue-600">
+                Download FREE Protocol
               </Button>
               <p className="text-xs text-muted-foreground">
-                ✅ Sin coste • ✅ Basado en estudios revisados por pares • ✅ Aplicable inmediatamente
+                ✅ No cost • ✅ Peer-reviewed studies • ✅ Immediate application
               </p>
             </CardContent>
           </Card>

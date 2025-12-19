@@ -3,7 +3,7 @@ import Medicine3Approach from "@/components/sections/medicine-3-approach";
 import FourPillars from "@/components/sections/four-pillars";
 import RecoveryLab from "@/components/sections/recovery-lab";
 import LatestFromChannel from "@/components/sections/latest-from-channel";
-import TrustSignals from "@/components/sections/trust-signals";
+import EnhancedTrustSignals from "@/components/sections/enhanced-trust-signals";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
@@ -17,7 +17,7 @@ export default function Home() {
         <FourPillars />
         <RecoveryLab />
         <LatestFromChannel />
-        <TrustSignals />
+        <EnhancedTrustSignals />
       </main>
       <Footer />
     </div>
