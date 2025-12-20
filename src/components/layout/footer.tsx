@@ -99,8 +99,8 @@ export default function Footer() {
               {[
                 { href: "/about", label: "About Us" },
                 { href: "/blog", label: "Science Blog" },
-                { href: "/assessment", label: "Free Assessment" },
-                { href: "/community", label: "Discord Community" }
+                { href: "/tools", label: "Age Calculator" },
+                { href: "#contact", label: "Contact Us" }
               ].map((item) => (
                 <li key={item.href}>
                   <Link 
@@ -122,10 +122,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { href: "/contact", label: "Direct Contact", icon: <Mailbox className="h-4 w-4" /> },
-                { href: "/faq", label: "Frequently Asked Questions", icon: <Shield className="h-4 w-4" /> },
-                { href: "/consultation", label: "Personal Consultation", icon: <Phone className="h-4 w-4" /> },
-                { href: "/refund", label: "Refund Policy", icon: <Shield className="h-4 w-4" /> }
+                { href: "#contact", label: "Direct Contact", icon: <Mailbox className="h-4 w-4" /> },
+                { href: "#faq", label: "Frequently Asked Questions", icon: <Shield className="h-4 w-4" /> },
+                { href: "#consultation", label: "Personal Consultation", icon: <Phone className="h-4 w-4" /> },
+                { href: "#refund", label: "Refund Policy", icon: <Shield className="h-4 w-4" /> }
               ].map((item) => (
                 <li key={item.href}>
                   <Link 

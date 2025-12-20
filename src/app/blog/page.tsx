@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, User, Clock, ArrowRight, Heart, TrendingUp, MessageCircle } from "lucide-react";
+import { Calendar, User, Clock, ArrowRight, Heart, TrendingUp, MessageCircle, Shield } from "lucide-react";
 import MedicalDisclaimer from "@/components/ui/medical-disclaimer";
 
 export default function BlogPage() {
@@ -12,13 +12,13 @@ export default function BlogPage() {
       id: 1,
       title: "Zone 2 Training Reduces Biological Age 2.3 Years: Meta-Analysis",
       author: "Dr. Talia Chen, PhD",
-      date: "15 Diciembre 2024",
+      date: "December 15, 2024",
       readTime: "8 min",
-      category: "Ejercicio",
+      category: "Exercise",
       image: "/images/pillars-strength.jpg",
-      excerpt: "Análisis exhaustivo de 47 estudios demuestra que el entrenamiento Zone 2 puede revertir el envejecimiento biológico. Los resultados muestran mejoras significativas en marcadores de longevidad.",
-      content: "Investigación detallada sobre protocolos de entrenamiento de baja intensidad...",
-      tags: ["zone2", "entrenamiento", "longevidad", "meta-análisis"],
+      excerpt: "Comprehensive analysis of 47 studies demonstrates Zone 2 training can reverse biological aging. Results show significant improvements in longevity markers.",
+      content: "Detailed research on low-intensity training protocols...",
+      tags: ["zone2", "training", "longevity", "meta-analysis"],
       stats: {
         views: 15234,
         shares: 892,
@@ -27,15 +27,15 @@ export default function BlogPage() {
     },
     {
       id: 2,
-      title: "NAD+ Precursors: El Futuro de la Optimización Mitocondrial",
+      title: "NAD+ Precursors: Future of Mitochondrial Optimization",
       author: "Andrés Morales",
-      date: "12 Diciembre 2024",
+      date: "December 12, 2024",
       readTime: "12 min",
-      category: "Suplementación",
+      category: "Supplementation",
       image: "/images/protocols-medical.jpg",
-      excerpt: "Los precursores de NAD+ están revolucionando la optimización mitocondrial. Descubre cómo estos compuestos pueden aumentar tu producción de ATP hasta en un 45%.",
-      content: "Análisis completo de los precursores de NAD+ más efectivos...",
-      tags: ["nad+", "mitocondrias", "suplementos", "energía celular"],
+      excerpt: "NAD+ precursors are revolutionizing mitochondrial optimization. Discover how these compounds can increase your ATP production by up to 45%.",
+      content: "Complete analysis of most effective NAD+ precursors...",
+      tags: ["nad+", "mitochondria", "supplements", "cellular-energy"],
       stats: {
         views: 24567,
         shares: 1543,
@@ -44,15 +44,15 @@ export default function BlogPage() {
     },
     {
       id: 3,
-      title: "Sleep Architecture: La Arquitectura del Sueño que Revierte el Envejecimiento",
+      title: "Sleep Architecture: The Sleep Blueprint That Reverses Aging",
       author: "Dr. Talia Chen, PhD",
-      date: "10 Diciembre 2024",
+      date: "December 10, 2024",
       readTime: "10 min",
-      category: "Recuperación",
+      category: "Recovery",
       image: "/images/recovery-therapy.jpg",
-      excerpt: "La arquitectura del sueño es más importante que la duración. Optimiza las 5 fases del sueño para maximizar hormonas de crecimiento y reparación celular.",
-      content: "Guía completa para optimizar tu arquitectura del sueño...",
-      tags: ["sueño", "recuperación", "hormonas", "longevidad"],
+      excerpt: "Sleep architecture is more important than duration. Optimize 5 sleep phases to maximize growth hormones and cellular repair.",
+      content: "Complete guide to optimizing your sleep architecture...",
+      tags: ["sleep", "recovery", "hormones", "longevity"],
       stats: {
         views: 19876,
         shares: 1205,
@@ -61,15 +61,15 @@ export default function BlogPage() {
     },
     {
       id: 4,
-      title: "Medición Biométrica: De Datos a Longevidad Medible",
+      title: "Biometric Tracking: From Data to Measurable Longevity",
       author: "Andrés Morales",
-      date: "8 Diciembre 2024",
+      date: "December 8, 2024",
       readTime: "15 min",
-      category: "Tecnología",
+      category: "Technology",
       image: "/images/research-lab.jpg",
-      excerpt: "Deja de adivinar y empieza a medir. Descubre los biomarcadores clave que predicen tu longevidad mejor que tu edad cronológica.",
-      content: "Tutorial completo sobre implementación de seguimiento biométrico...",
-      tags: ["biomarcadores", "medición", "wearables", "datos"],
+      excerpt: "Stop guessing and start measuring. Discover key biomarkers that predict your longevity better than chronological age.",
+      content: "Complete tutorial on biometric tracking implementation...",
+      tags: ["biomarkers", "measurement", "wearables", "data"],
       stats: {
         views: 31245,
         shares: 2103,
@@ -85,23 +85,40 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             <Badge variant="secondary" className="text-sm px-4 py-2">
-              Blog Científico
+              Scientific Blog
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              {" "}Investigación y 
+              {" "}Research & 
               <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
-                Protocolos Validados
+                {" "}Validated Protocols
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Artículos basados en <span className="font-semibold text-emerald-600 dark:text-emerald-400">evidencia científica</span> 
-              escritos por expertos en longevidad. 
-              <span className="font-semibold">Sin marketing, solo ciencia.</span>
+              Articles based on <span className="font-semibold text-emerald-600 dark:text-emerald-400">scientific evidence</span> 
+              written by longevity experts. 
+              <span className="font-semibold">No marketing, just science.</span>
             </p>
+            
+            {/* Fact-Checked Badge */}
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/20 px-4 py-2 rounded-full border border-emerald-200 dark:border-emerald-800">
+                <Shield className="h-4 w-4 text-emerald-600" />
+                <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Fact-Checked Content</span>
+              </div>
+              <span className="text-sm text-muted-foreground">All articles verified against peer-reviewed research</span>
+            </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                Publicado semanalmente
+                Weekly published
+              </div>
+              <div className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                Expert written
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                5-15 min read
               </div>
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -149,7 +166,7 @@ export default function BlogPage() {
                   {/* Reading Time */}
                   <div className="absolute bottom-4 left-4">
                     <Badge variant="secondary" className="bg-black/60 backdrop-blur-sm text-white text-xs">
-                      {post.readTime} lectura
+                      {post.readTime} read
                     </Badge>
                   </div>
                 </div>
@@ -204,7 +221,7 @@ export default function BlogPage() {
                       className="hover:bg-muted hover-lift transition-all duration-300"
                     >
                       <ArrowRight className="h-3 w-3 mr-1" />
-                      Leer más
+                       Read more
                     </Button>
                   </div>
                 </CardContent>
@@ -220,32 +237,32 @@ export default function BlogPage() {
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold">
-                {" "}No te Pierdas la Última Investigación
+                {" "}Don't Miss Latest Research
               </h2>
               <p className="text-lg text-muted-foreground">
-                Recibe artículos exclusivos y protocolos actualizados 
-                directamente en tu bandeja de entrada cada semana.
+                Get exclusive articles and updated protocols 
+                directly in your inbox every week.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-lg px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
                 <Heart className="h-5 w-5 mr-2" />
-                Suscribirse Gratis
+                Subscribe Free
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 hover:bg-muted transition-all duration-300">
-                Ver Todos los Artículos
+                View All Articles
               </Button>
             </div>
             
             <div className="flex justify-center gap-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse-slow"></div>
-                <span>25,000+ suscriptores</span>
+                <span>25,000+ subscribers</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse-slow"></div>
-                <span>Publicación semanal</span>
+                <span>Weekly publication</span>
               </div>
             </div>
           </div>

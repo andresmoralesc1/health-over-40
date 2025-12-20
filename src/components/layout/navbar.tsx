@@ -76,7 +76,8 @@ export default function Navbar() {
                 { href: "/pillars", label: "Pillars" },
                 { href: "/recovery", label: "Recovery Lab" },
                 { href: "/protocols", label: "Protocols" },
-                { href: "/research", label: "Research" }
+                { href: "/research", label: "Research" },
+                { href: "/about", label: "About" }
               ].map((item) => (
                 <Link
                   key={item.href}
