@@ -1,7 +1,10 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Star, TrendingUp, Shield, Zap } from "lucide-react";
+import { ShoppingCart, Star, Heart, ExternalLink, CheckCircle, TrendingUp, Shield, Clock, Zap } from "lucide-react";
+import MedicalDisclaimer from "@/components/ui/medical-disclaimer";
 
 interface Tool {
   id: string;

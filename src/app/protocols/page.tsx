@@ -1,0 +1,304 @@
+"use client";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Activity, Calendar, Target, Zap, Users, CheckCircle, Play, Clock, BookOpen } from "lucide-react";
+import MedicalDisclaimer from "@/components/ui/medical-disclaimer";
+
+export default function ProtocolsPage() {
+  const protocols = [
+    {
+      id: 1,
+      icon: <Activity className="h-6 w-6" />,
+      title: "Zone 2 Cardio Foundation",
+      description: "La base del metabolismo saludable. Protocolo de 8 semanas para construir capacidad aeróbica y salud mitocondrial.",
+      image: "/images/protocols-medical.jpg",
+      duration: "8 semanas",
+      level: "Fundacional",
+      category: "Cardio",
+      equipment: ["Bicicleta estática", "Monitor de ritmo cardíaco"],
+      frequency: "4-5 días/semana",
+      benefits: ["Longevidad", "Salud cardiovascular", "Recuperación", "Energía"],
+      protocol: "zone2-foundation",
+      stats: [
+        { metric: "Capacidad aeróbica", improvement: "+35%" },
+        { metric: "Eficiencia mitocondrial", improvement: "+45%" },
+        { metric: "Recuperación", improvement: "+60%" }
+      ],
+      color: "from-blue-500 to-indigo-600"
+    },
+    {
+      id: 2,
+      icon: <Target className="h-6 w-6" />,
+      title: "Muscle Building 40+",
+      description: "Construcción muscular inteligente después de los 40. Prevención de sarcopenia y optimización hormonal.",
+      image: "/images/pillars-strength.jpg",
+      duration: "12 semanas",
+      level: "Intermedio",
+      category: "Fuerza",
+      equipment: ["Pesos libres", "Bandas de resistencia", "Máquinas"],
+      frequency: "3-4 días/semana",
+      benefits: ["Masa muscular", "Densidad ósea", "Metabolismo", "Hormonas"],
+      protocol: "muscle-building-40",
+      stats: [
+        { metric: "Masa magra", improvement: "+8%" },
+        { metric: "Fuerza funcional", improvement: "+25%" },
+        { metric: "Testosterona libre", improvement: "+30%" }
+      ],
+      color: "from-emerald-500 to-green-600"
+    },
+    {
+      id: 3,
+      icon: <Calendar className="h-6 w-6" />,
+      title: "Sleep Optimization Protocol",
+      description: "Maximiza las 5 fases del sueño para optimizar hormonas de crecimiento y recuperación celular.",
+      image: "/images/recovery-therapy.jpg",
+      duration: "6 semanas",
+      level: "Todos",
+      category: "Recuperación",
+      equipment: ["Monitor de sueño", "Suplementación específica"],
+      frequency: "Diario",
+      benefits: ["Recuperación", "Hormonas", "Cognición", "Energía"],
+      protocol: "sleep-optimization",
+      stats: [
+        { metric: "Sueño profundo", improvement: "+55%" },
+        { metric: "GH nocturna", improvement: "+40%" },
+        { metric: "Función cognitiva", improvement: "+30%" }
+      ],
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      id: 4,
+      icon: <Zap className="h-6 w-6" />,
+      title: "Metabolic Reset",
+      description: "Resetea tu metabolismo en 30 días. Protocolo intensivo para sensibilización a la insulina y flexibilidad metabólica.",
+      image: "/images/hormones-balance.jpg",
+      duration: "30 días",
+      level: "Avanzado",
+      category: "Metabolismo",
+      equipment: ["Glucómetro", "Cinta métrica", "App de seguimiento"],
+      frequency: "Diario",
+      benefits: ["Peso", "Energía", "Claridad mental", "Longevidad"],
+      protocol: "metabolic-reset",
+      stats: [
+        { metric: "Sensibilidad insulina", improvement: "+70%" },
+        { metric: "Flexibilidad metabólica", improvement: "+85%" },
+        { metric: "Grasa visceral", improvement: "-25%" }
+      ],
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/20">
+      {/* Hero Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-6 max-w-4xl mx-auto">
+            <Badge variant="secondary" className="text-sm px-4 py-2">
+              Protocolos Validados
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+              Protocolos de 
+              <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                {" "}Medicina 3.0
+              </span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Protocolos probados en 5,000+ usuarios. 
+              <span className="font-semibold text-emerald-600 dark:text-emerald-400"> Resultados medibles</span> 
+              con datos reales de biomarcadores.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                Basado en evidencia
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="h-4 w-4 text-blue-500" />
+                5,000+ usuarios
+              </div>
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-4 w-4 text-purple-500" />
+                Estudios científicos
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Protocol Filter */}
+      <section className="py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-3">
+            <Badge variant="outline" className="px-4 py-2 hover:bg-muted transition-colors cursor-pointer">
+              Todos (4)
+            </Badge>
+            <Badge variant="outline" className="px-4 py-2 hover:bg-muted transition-colors cursor-pointer">
+              Cardio (1)
+            </Badge>
+            <Badge variant="outline" className="px-4 py-2 hover:bg-muted transition-colors cursor-pointer">
+              Fuerza (1)
+            </Badge>
+            <Badge variant="outline" className="px-4 py-2 hover:bg-muted transition-colors cursor-pointer">
+              Recuperación (1)
+            </Badge>
+            <Badge variant="outline" className="px-4 py-2 hover:bg-muted transition-colors cursor-pointer">
+              Metabolismo (1)
+            </Badge>
+          </div>
+        </div>
+      </section>
+
+      {/* Protocols Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 md:grid-cols-2">
+            {protocols.map((protocol) => (
+              <Card 
+                key={protocol.id}
+                className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500"
+                style={{ 
+                  animationDelay: `${protocol.id * 150}ms`,
+                  animation: 'fadeInUp 0.6s ease-out forwards'
+                }}
+              >
+                {/* Protocol Header */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={protocol.image}
+                    alt={protocol.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                  
+                  {/* Protocol Badge */}
+                  <div className="absolute top-4 left-4">
+                    <Badge className={`bg-gradient-to-r ${protocol.color} text-white text-xs font-medium`}>
+                      {protocol.level}
+                    </Badge>
+                  </div>
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-4 right-4">
+                    <Badge variant="secondary" className="bg-white/90 backdrop-blur-sm text-xs">
+                      {protocol.category}
+                    </Badge>
+                  </div>
+
+                  {/* Protocol Icon */}
+                  <div className="absolute bottom-4 left-4">
+                    <div className={`p-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg`}>
+                      <div className={`bg-gradient-to-r ${protocol.color} bg-clip-text text-transparent`}>
+                        {protocol.icon}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl font-bold">{protocol.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {protocol.description}
+                  </p>
+                  
+                  {/* Protocol Meta */}
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground pt-2">
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      {protocol.duration}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Users className="h-3 w-3" />
+                      {protocol.frequency}
+                    </div>
+                  </div>
+                </CardHeader>
+
+                <CardContent className="space-y-4">
+                  {/* Equipment */}
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Equipamiento Necesario:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {protocol.equipment.map((item, index) => (
+                        <Badge key={index} variant="outline" className="text-xs">
+                          {item}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Benefits */}
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Beneficios:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {protocol.benefits.map((benefit, index) => (
+                        <Badge key={index} className="text-xs bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200">
+                          {benefit}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="bg-muted/50 rounded-lg p-3 space-y-2">
+                    <h4 className="font-semibold text-sm flex items-center gap-2">
+                      <Target className="h-4 w-4 text-emerald-600" />
+                      Resultados Típicos:
+                    </h4>
+                    <div className="grid grid-cols-3 gap-2 text-xs">
+                      {protocol.stats.map((stat, index) => (
+                        <div key={index} className="text-center">
+                          <div className="font-bold text-emerald-600">{stat.improvement}</div>
+                          <div className="text-muted-foreground">{stat.metric}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Button */}
+                  <Button className={`w-full bg-gradient-to-r ${protocol.color} hover:opacity-90 transition-all duration-300 group-hover:scale-105`}>
+                    <Play className="h-4 w-4 mr-2" />
+                    Iniciar Protocolo
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-6 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold">
+              Protocolos Personalizados para Ti
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Cada persona es única. Obtén una evaluación gratuita y protocolos personalizados 
+              basados en tus biomarcadores y objetivos específicos.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-lg px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                Evaluación Gratuita
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 hover:bg-muted transition-all duration-300">
+                Ver Todos los Protocolos
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <MedicalDisclaimer />
+        </div>
+      </section>
+    </div>
+  );
+}

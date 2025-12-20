@@ -12,30 +12,36 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-800/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-xl sm:text-2xl bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
-              Hacked Aging
-            </span>
+          <Link href="/" className="flex items-center space-x-3 group hover-lift transition-all duration-300">
+            <div className="relative">
+              <span className="font-bold text-lg sm:text-xl bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                Hacked Aging
+              </span>
+              <div className="absolute -bottom-1 -right-2 w-2 h-2 bg-emerald-500 rounded-full animate-pulse-slow"></div>
+            </div>
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/pillars", label: "Pillars" },
-              { href: "/recovery", label: "Recovery Lab" },
-              { href: "/protocols", label: "Protocols" },
-              { href: "/research", label: "Research" }
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="transition-all duration-200 hover:text-foreground hover:bg-gray-100/50 dark:hover:bg-gray-800/50 px-3 py-2 rounded-lg"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+        <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium">
+          {[
+            { href: "/", label: "Inicio", active: true },
+            { href: "/pillars", label: "4 Pilares" },
+            { href: "/recovery", label: "Recuperación" },
+            { href: "/protocols", label: "Protocolos" },
+            { href: "/research", label: "Investigación" },
+            { href: "/about", label: "Sobre Nosotros" }
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`transition-all duration-300 hover:text-foreground hover:bg-gray-100/50 dark:hover:bg-gray-800/50 px-4 py-2 rounded-lg font-medium ${
+                item.active ? 'bg-primary/10 text-primary' : ''
+              } hover-lift`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
           
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-4">
