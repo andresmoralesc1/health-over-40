@@ -76,7 +76,7 @@ export default function AboutPage() {
         description: "Science-backed longevity platform for high-performance adults over 40 featuring expert guidance from Dr. Talia Chen and Andrés Morales.",
         inLanguage: "en-US",
         isAccessibleForFree: true,
-        about: "Longevity, Health Optimization, Medicine 3.0"
+        about: "Longevity, Health Optimization, Medicine 3.0, Biohacking"
       }
     ]
   };
@@ -93,11 +93,11 @@ export default function AboutPage() {
           {/* Hero Section */}
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Nuestra Misión: Democratizar la Ciencia de la Longevidad
+              Our Mission: Democratize Longevity Science
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              En Health Over 40, creemos que la mediana edad es el comienzo de tu "segundo acto" 
-              de máximo rendimiento.
+              In Health Over 40, we believe middle age is the beginning of your "second act" 
+              of peak performance.
             </p>
           </div>
 
@@ -105,18 +105,16 @@ export default function AboutPage() {
           <Card className="border-0 shadow-sm">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-2xl">
-                Transformamos el Ruido en Señal
+                Transform Noise into Signal
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 text-center">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Somos un equipo de investigadores y entusiastas de la salud digital dedicados 
-                a filtrar el ruido del marketing y entregarte soluciones basadas en datos.
-              </p>
-              <p className="leading-relaxed">
-                La industria de la salud está saturada de "soluciones rápidas" y marketing engañoso. 
-                Nosotros nos sumergimos en los estudios primarios, analizamos los datos y traducimos 
-                la compleja ciencia de la longevidad en protocolos prácticos que puedes implementar hoy mismo.
+              We are a team of digital health researchers and enthusiasts dedicated 
+              to filtering out marketing noise and delivering data-driven solutions.
+              The health industry is saturated with "quick solutions" and deceptive marketing. 
+              We dive into primary studies, analyze data, and translate 
+              complex longevity science into practical protocols you can implement today.
               </p>
             </CardContent>
           </Card>
@@ -128,12 +126,12 @@ export default function AboutPage() {
                 <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
                   <Database className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                 </div>
-                <CardTitle className="text-lg">Basado en Evidencia</CardTitle>
+                <CardTitle className="text-lg">                Evidence-Based</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  No promovemos "hacks" temporales. Citamos estudios revisados por pares 
-                  y voces líderes en Medicina 3.0 como Peter Attia, Huberman, y Rhonda Patrick.
+                We don't promote "quick hacks." We cite peer-reviewed studies 
+                and leaders in Medicine 3.0 like Peter Attia, Huberman, and Rhonda Patrick.
                 </p>
               </CardContent>
             </Card>
