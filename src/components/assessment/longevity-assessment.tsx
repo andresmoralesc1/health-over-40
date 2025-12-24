@@ -15,109 +15,110 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    category: "Exercise & Movement",
-    question: "How many days per week do you do moderate exercise (30+ minutes)?",
-    icon: <Activity className="h-5 w-5" />,
+    category: "Exercise",
+    question: "How often do you engage in moderate exercise (walking, cycling, etc)?",
     options: [
-      { text: "0-1 days", score: 1 },
-      { text: "2-3 days", score: 2 },
-      { text: "4-5 days", score: 3 },
-      { text: "6-7 days", score: 4 }
-    ]
+      { text: "Rarely or never", score: 0 },
+      { text: "1-2 times per week", score: 2 },
+      { text: "3-4 times per week", score: 4 },
+      { text: "5+ times per week", score: 5 }
+    ],
+    icon: <Activity className="h-5 w-5" />
   },
   {
     id: 2,
-    category: "Exercise & Movement", 
-    question: "Do you incorporate strength training?",
-    icon: <Activity className="h-5 w-5" />,
+    category: "Exercise", 
+    question: "Do you include strength training in your routine?",
     options: [
-      { text: "Never", score: 1 },
-      { text: "Rarely (1x/month)", score: 2 },
-      { text: "Sometimes (1-2x/week)", score: 3 },
-      { text: "Regularly (3+x/week)", score: 4 }
-    ]
+      { text: "Never", score: 0 },
+      { text: "Occasionally (1-2x/month)", score: 1 },
+      { text: "Regularly (1-2x/week)", score: 3 },
+      { text: "Very regularly (3+x/week)", score: 5 }
+    ],
+    icon: <Activity className="h-5 w-5" />
   },
   {
     id: 3,
     category: "Nutrition",
-    question: "How many servings of vegetables do you eat daily?",
-    icon: <Heart className="h-5 w-5" />,
+    question: "How would you describe your typical diet?",
     options: [
-      { text: "0-1 servings", score: 1 },
-      { text: "2-3 servings", score: 2 },
-      { text: "4-5 servings", score: 3 },
-      { text: "6+ servings", score: 4 }
-    ]
+      { text: "Mostly processed foods", score: 0 },
+      { text: "Mixed diet, some healthy choices", score: 2 },
+      { text: "Mostly whole foods", score: 4 },
+      { text: "Primarily plant-based, whole foods", score: 5 }
+    ],
+    icon: <Heart className="h-5 w-5" />
   },
   {
     id: 4,
-    category: "Nutrition",
-    question: "How would you rate your protein intake?",
-    icon: <Heart className="h-5 w-5" />,
+    category: "Sleep",
+    question: "How many hours of quality sleep do you get per night?",
     options: [
-      { text: "Very low", score: 1 },
-      { text: "Low", score: 2 },
-      { text: "Adequate", score: 3 },
-      { text: "Optimal (1.6-2.2g/kg)", score: 4 }
-    ]
+      { text: "Less than 6 hours", score: 0 },
+      { text: "6-7 hours", score: 2 },
+      { text: "7-8 hours", score: 4 },
+      { text: "8+ hours consistently", score: 5 }
+    ],
+    icon: <Brain className="h-5 w-5" />
   },
   {
     id: 5,
-    category: "Sleep & Recovery",
-    question: "How many hours do you sleep per night?",
-    icon: <Brain className="h-5 w-5" />,
+    category: "Sleep",
+    question: "How consistent is your sleep schedule?",
     options: [
-      { text: "<6 hours", score: 1 },
-      { text: "6-7 hours", score: 2 },
-      { text: "7-8 hours", score: 3 },
-      { text: "8-9 hours", score: 4 }
-    ]
+      { text: "Very irregular", score: 0 },
+      { text: "Somewhat consistent", score: 2 },
+      { text: "Mostly consistent", score: 4 },
+      { text: "Very consistent (same bedtime/wake time)", score: 5 }
+    ],
+    icon: <Brain className="h-5 w-5" />
   },
   {
     id: 6,
-    category: "Sleep & Recovery",
-    question: "How would you rate your sleep quality?",
-    icon: <Brain className="h-5 w-5" />,
+    category: "Social",
+    question: "How often do you have meaningful social interactions?",
     options: [
-      { text: "Poor - frequently wake up", score: 1 },
-      { text: "Fair - some issues", score: 2 },
-      { text: "Good - mostly restful", score: 3 },
-      { text: "Excellent - deep, restorative", score: 4 }
-    ]
+      { text: "Rarely", score: 0 },
+      { text: "Occasionally", score: 2 },
+      { text: "Regularly", score: 4 },
+      { text: "Daily", score: 5 }
+    ],
+    icon: <Users className="h-5 w-5" />
   },
   {
     id: 7,
-    category: "Social Connection",
-    question: "How satisfied are you with your social connections?",
-    icon: <Users className="h-5 w-5" />,
+    category: "Stress",
+    question: "How would you rate your current stress level?",
     options: [
-      { text: "Very dissatisfied", score: 1 },
-      { text: "Somewhat dissatisfied", score: 2 },
-      { text: "Satisfied", score: 3 },
-      { text: "Very satisfied", score: 4 }
-    ]
+      { text: "Very high stress", score: 0 },
+      { text: "Moderate stress", score: 2 },
+      { text: "Low stress", score: 4 },
+      { text: "Very low stress", score: 5 }
+    ],
+    icon: <Brain className="h-5 w-5" />
   },
   {
     id: 8,
-    category: "Stress Management",
-    question: "How do you handle daily stress?",
-    icon: <TrendingUp className="h-5 w-5" />,
+    category: "Stress",
+    question: "Do you practice stress management techniques?",
     options: [
-      { text: "Poorly - feel overwhelmed", score: 1 },
-      { text: "Sometimes struggle", score: 2 },
-      { text: "Usually manage well", score: 3 },
-      { text: "Very well - have coping strategies", score: 4 }
-    ]
+      { text: "Never", score: 0 },
+      { text: "Rarely", score: 1 },
+      { text: "Sometimes", score: 3 },
+      { text: "Regularly", score: 5 }
+    ],
+    icon: <Brain className="h-5 w-5" />
   }
 ];
 
 export default function LongevityAssessment() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<{ [key: number]: number }>({});
+  const [answers, setAnswers] = useState<number[]>([]);
   const [showResults, setShowResults] = useState(false);
 
   const handleAnswer = (score: number) => {
-    setAnswers({ ...answers, [questions[currentQuestion].id]: score });
+    const newAnswers = [...answers, score];
+    setAnswers(newAnswers);
     
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -127,107 +128,125 @@ export default function LongevityAssessment() {
   };
 
   const calculateScores = () => {
-    const categories = ["Exercise & Movement", "Nutrition", "Sleep & Recovery", "Social Connection", "Stress Management"];
-    const categoryScores: { [key: string]: { score: number; max: number } } = {};
+    const categoryScores: { [key: string]: number } = {};
+    const categoryTotals: { [key: string]: number } = {};
     
-    categories.forEach(category => {
-      const categoryQuestions = questions.filter(q => q.category === category);
-      const totalScore = categoryQuestions.reduce((sum, q) => sum + (answers[q.id] || 0), 0);
-      const maxScore = categoryQuestions.length * 4;
-      categoryScores[category] = { score: totalScore, max: maxScore };
+    questions.forEach((q, index) => {
+      if (!categoryScores[q.category]) {
+        categoryScores[q.category] = 0;
+        categoryTotals[q.category] = 0;
+      }
+      categoryScores[q.category] += answers[index];
+      categoryTotals[q.category] += 5; // Max score per question
     });
-    
-    const totalScore = Object.values(categoryScores).reduce((sum, cat) => sum + cat.score, 0);
-    const totalMax = Object.values(categoryScores).reduce((sum, cat) => sum + cat.max, 0);
-    const percentage = Math.round((totalScore / totalMax) * 100);
-    
-    return { categoryScores, totalScore, totalMax, percentage };
+
+    const percentages: { [key: string]: number } = {};
+    Object.keys(categoryScores).forEach(cat => {
+      percentages[cat] = Math.round((categoryScores[cat] / categoryTotals[cat]) * 100);
+    });
+
+    return percentages;
   };
 
-  const getScoreColor = (percentage: number) => {
-    if (percentage >= 80) return "text-green-600";
-    if (percentage >= 60) return "text-yellow-600";
-    return "text-red-600";
+  const getTotalScore = () => {
+    const maxPossible = questions.length * 5;
+    const totalScore = answers.reduce((sum, score) => sum + score, 0);
+    return Math.round((totalScore / maxPossible) * 100);
   };
 
-  const getScoreMessage = (percentage: number) => {
-    if (percentage >= 80) return "Excellent! You're building a strong foundation for longevity.";
-    if (percentage >= 60) return "Good start! Focus on the areas below for optimal results.";
-    return "Room for improvement. Small changes can make a big difference!";
+  const getRecommendations = (scores: { [key: string]: number }) => {
+    const recommendations = [];
+    
+    if (scores.Exercise < 60) {
+      recommendations.push("Consider starting with our Zone 2 Cardio Foundation protocol");
+    }
+    if (scores.Nutrition < 60) {
+      recommendations.push("Focus on whole foods and consider our nutrition guidelines");
+    }
+    if (scores.Sleep < 60) {
+      recommendations.push("Prioritize sleep consistency for better recovery");
+    }
+    if (scores.Social < 60) {
+      recommendations.push("Build regular social connections for mental health");
+    }
+    if (scores.Stress < 60) {
+      recommendations.push("Implement stress management techniques daily");
+    }
+
+    return recommendations;
   };
 
   if (showResults) {
-    const { categoryScores, percentage } = calculateScores();
-    
+    const scores = calculateScores();
+    const totalScore = getTotalScore();
+    const recommendations = getRecommendations(scores);
+
     return (
-      <div className="max-w-4xl mx-auto p-6 space-y-6">
-        <Card className="text-center">
-          <CardHeader>
+      <div className="max-w-4xl mx-auto p-6">
+        <Card className="mb-8">
+          <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold">Your Longevity Score</CardTitle>
-            <CardDescription>Based on your lifestyle assessment</CardDescription>
+            <CardDescription>Personalized assessment results</CardDescription>
           </CardHeader>
           <CardContent>
-            <div classNametext-6xl font-bold mb-4 ${getScoreColor(percentage)}`}>
-              {percentage}%
+            <div className="text-center mb-8">
+              <div className="text-6xl font-bold text-primary mb-2">{totalScore}%</div>
+              <div className="text-xl text-gray-600">
+                {totalScore >= 80 ? "Excellent!" : 
+                 totalScore >= 60 ? "Good Progress!" : 
+                 totalScore >= 40 ? "Room for Improvement" : "Needs Attention"}
+              </div>
             </div>
-            <p className="text-lg text-gray-600 mb-6">{getScoreMessage(percentage)}</p>
-            
-            <div className="grid md:grid-cols-2 gap-4 mt-8">
-              {Object.entries(categoryScores).map(([category, scores]) => (
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {Object.entries(scores).map(([category, score]) => (
                 <Card key={category}>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">{category}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <Progress value={(scores.score / scores.max) * 100} className="mb-2" />
-                    <p className="text-sm text-gray-600">
-                      {scores.score}/{scores.max} points
-                    </p>
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium capitalize">{category}</span>
+                      <span className="text-sm font-bold">{score}%</span>
+                    </div>
+                    <Progress value={score} className="h-2" />
                   </CardContent>
                 </Card>
               ))}
             </div>
-            
-            <div className="mt-8 space-y-4">
-              <h3 className="text-xl font-semibold">Next Steps</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {percentage < 80 && (
-                  <Card>
-                    <CardContent className="pt-6">
-                      <h4 className="font-medium mb-2">🏃‍♂️ Movement Protocol</h4>
-                      <p className="text-sm text-gray-600 mb-3">Build your aerobic foundation</p>
-                      <Button variant="outline" size="sm">Zone 2 Cardio</Button>
-                    </CardContent>
-                  </Card>
-                )}
-                {percentage < 70 && (
-                  <Card>
-                    <CardContent className="pt-6">
-                      <h4 className="font-medium mb-2">🥗 Nutrition Guide</h4>
-                      <p className="text-sm text-gray-600 mb-3">Optimize your nutrition</p>
-                      <Button variant="outline" size="sm">DREE Method</Button>
-                    </CardContent>
-                  </Card>
-                )}
-                <Card>
-                  <CardContent className="pt-6">
-                    <h4 className="font-medium mb-2">📊 Track Progress</h4>
-                    <p className="text-sm text-gray-600 mb-3">Monitor your biomarkers</p>
-                    <Button variant="outline" size="sm">Longevity Toolkit</Button>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="pt-6">
-                    <h4 className="font-medium mb-2">🔄 Retake Assessment</h4>
-                    <p className="text-sm text-gray-600 mb-3">In 30 days</p>
-                    <Button variant="outline" size="sm" onClick={() => {
-                      setShowResults(false);
-                      setCurrentQuestion(0);
-                      setAnswers({});
-                    }}>Retake Test</Button>
-                  </CardContent>
-                </Card>
-              </div>
+
+            {recommendations.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">Recommendations</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {recommendations.map((rec, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>{rec}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            )}
+
+            <div className="mt-8 text-center">
+              <Button 
+                onClick={() => window.location.href = "/protocols"}
+                className="mr-4"
+              >
+                View Protocols
+              </Button>
+              <Button 
+                variant="outline"
+                onClick={() => {
+                  setCurrentQuestion(0);
+                  setAnswers([]);
+                  setShowResults(false);
+                }}
+              >
+                Retake Assessment
+              </Button>
             </div>
           </CardContent>
         </Card>
@@ -235,48 +254,38 @@ export default function LongevityAssessment() {
     );
   }
 
+  const question = questions[currentQuestion];
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Your Longevity Score</h1>
-        <p className="text-gray-600">Discover how your current habits support your healthspan and lifespan</p>
-        <Progress value={progress} className="mt-4" />
-        <p className="text-sm text-gray-500 mt-2">Question {currentQuestion + 1} of {questions.length}</p>
-      </div>
-
       <Card>
         <CardHeader>
-          <div className="flex items-center gap-2 mb-2">
-            {questions[currentQuestion].icon}
-            <span className="text-sm font-medium text-gray-500">
-              {questions[currentQuestion].category}
-            </span>
+          <div className="flex justify-between items-center mb-4">
+            <span className="text-sm text-gray-500">Question {currentQuestion + 1} of {questions.length}</span>
+            <span className="text-sm font-medium capitalize">{question.category}</span>
           </div>
-          <CardTitle className="text-xl">{questions[currentQuestion].question}</CardTitle>
+          <Progress value={progress} className="h-2 mb-4" />
+          <CardTitle className="text-xl">{question.question}</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-3">
-          {questions[currentQuestion].options.map((option, index) => (
-            <Button
-              key={index}
-              variant="outline"
-              className="w-full justify-start text-left h-auto p-4"
-              onClick={() => handleAnswer(option.score)}
-            >
-              <div className="flex items-center justify-between w-full">
-                <span>{option.text}</span>
-                <Circle className="h-4 w-4 text-gray-400" />
-              </div>
-            </Button>
-          ))}
+        <CardContent>
+          <div className="space-y-3">
+            {question.options.map((option, index) => (
+              <Button
+                key={index}
+                variant="outline"
+                className="w-full text-left justify-start h-auto p-4"
+                onClick={() => handleAnswer(option.score)}
+              >
+                <span className="flex items-center">
+                  <Circle className="h-4 w-4 mr-3 flex-shrink-0" />
+                  <span>{option.text}</span>
+                </span>
+              </Button>
+            ))}
+          </div>
         </CardContent>
       </Card>
-
-      <div className="mt-6 text-center text-sm text-gray-500">
-        <p>This assessment takes 2 minutes and helps identify areas for improvement</p>
-        <p className="mt-2">Your results are private and not stored</p>
-      </div>
     </div>
   );
 }

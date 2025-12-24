@@ -1,15 +1,20 @@
 import LongevityAssessment from "@/components/assessment/longevity-assessment";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Your Longevity Score | Hacked Aging",
-  description: "Take our 2-minute assessment to discover your longevity score and get personalized recommendations for extending your healthspan.",
-};
 
 export default function AssessmentPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <LongevityAssessment />
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+      <div className="container mx-auto py-8">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Your Longevity Score
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Take this quick assessment to evaluate your current health habits and get personalized recommendations
+          </p>
+        </div>
+        
+        <LongevityAssessment />
+      </div>
     </div>
   );
 }
